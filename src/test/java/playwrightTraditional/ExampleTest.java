@@ -16,7 +16,7 @@ class ExampleTest {
     void setUp() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(false));
+                .setHeadless(true));
         context = browser.newContext();
         page = context.newPage();
         page.navigate("https://depaul.bncollege.com/");
